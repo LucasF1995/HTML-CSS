@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? family= Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100; 1.200;1.300;1.400;1.500;1.600;1.700;1.800;1.900 & display=swap');
+
+@font-face {
+    font-family:'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+/*
+escala de verde do claro para o escuro;
+#c5ebd6
+#83elad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+:root {/*Aqui criamos essas cores para facilitar e nao ter que copiar todas as vezes os codigos de cores e font do texto.*/
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --font-padrao:arial, verdana,helvetica,sans-serif;
+    --font-destaque:'bebas neue', cursive;
+    --font-android: 'Android', cursive;
+}
+*{/*Aqui criamos uma tag universal que servirá para todas as tags.*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body{/*criamos aqui, um estilo para o corpo e tambem escolhemos a fonte do texto.*/
+    background-color:var(--cor0);
+    font-family: var(--font-padrao);
+}
+a.externo::after{
+    content: '\1F517\00A0';
+}
+header{/*aqui demos um estilho para o cabeçalho, mudamos a cor,escolhemos o tamanho da altura, demos espaço e centralizamos o texto.*/
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    padding-top: 40px;
+    text-align: center;
+}
+header > h1{/*ainda no cabeçalho,porém, editando o h1. cor da letra, a fonte do texto , o tamanho da fonte e a margem da parte de baixo para nao ficar grudada ao final do mesmo.*/
+    color:white;
+    font-family: var(--font-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.582);
+}
+header > p{/*aqui editamos o paragrafo, fonte, tamanho da fonte, adaptamos a largura maxima que o texto vai abrir,definimos a margem:auto onde colocamos o texto centralizado e para finalizar, colocamos um espaco no inicio e no fim do paragrafo.*/
+    font-family:var(--font-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding-left:10px;
+    padding-right:10px;
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.582);
+}
+nav{ /*aqui mudamos a cor de fundo, espaço do texto com a borda e colocamos uma pequena sombra no texto.*/
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.788);
+}
+nav > a{/*mudamos a cor da letra , espaço do texto com a borda , não decoramos o texto, e colocamos a fonte em negrito e decimos colocar 0.5segundos de transição , ao passar o mouse por cima ele demora o tempo que colocamos para mudar para a outra opcao */
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+
+}
+nav > a:hover{/*aqui mudamos a cor ao passar o mouse por cima dos links, e ao passar a letra muda de cor para um tom mais forte*/
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+main{/*chegamos no menu, definimos o maximo e o minimo da largura, o espaço entre o texto e da borda, definimos o texto centralizado,a largura, cor de fundo, a sombra do menu, e por fim colocamos as pontas do nosso menu arredondadas.*/
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    width: 800px;
+    background-color: white;
+    box-shadow: 3px 5px 8px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main h1{/*colocamos cor na letra e escolhemos a fonte.*/
+    color:var(--cor4);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main p{/*decoramos os paragrafos, margem, deixamos o texto justificado, inicio de um paragrafo com espaço, espaco de uma linha para a outra e o tamanho da fonte*/
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height:2em;
+}
+main h2{/*apenas a fonte*/
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+main img.pequena{/*diminuimos aqui o tamanho da largura da imagem colocamos decimos que ela seria um bloco e colocamos ela centralizada com a pagina. */
+    width: 50%;
+    display: block;
+    margin:auto;
+}
+
+main strong{/*aqui decoramos as palavras que estao destacadas no nosso texto, mudamos a cor e colocamos em negrito*/
+    color: var(--cor4);
+    font-weight: bold;
+    
+}
+main a {/*aqui decoramos os links citados no texto , sem decoração, negrito, cor da fonte, cor de fundo e tamanho*/
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:houver{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+div.video{
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin:0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height:90%;
+}
+aside{/*aqui mudamos a cor de fundo, espaçamento e raiamos a borda*/
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.404);
+}
+aside h3{/*aqui colocamos o texto no centro*/
+    text-align: center;
+}
+aside ul{/*aqui alinhamos a lista para ficar dentro do nosso corpo e dividimos em duas listas. Também colocamos o sinal na lista e esse codigo 00a0 seria o espaco para nao ficar colado */
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+aside h3{/*fundo , cor da letra , espaçamento , margem negativa e esta vazando para a fora e arrumamos o arredondamento da borda*/
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px ;
+}
+footer{/*aqui mudamos a cor de fundo, texto, tam da fonte e espaço.*/
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8pem;
+    padding: 5px;
+}
